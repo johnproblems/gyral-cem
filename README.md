@@ -23,8 +23,14 @@ an `index.ts` barrel). See [prd.md](./prd.md) for the full brief.
 ![Machine-readable check output, version, and VS Code custom data](docs/demo/03-formats.gif)
 *`--check --format json`, `--version`, and editor data. ([MP4](docs/demo/03-formats.mp4))*
 
-Every command shown runs for real; regenerate the clips with
-`.venv/bin/python docs/demo/render.py` (see the script header).
+Every command shown runs for real; regenerate the clips with:
+
+```sh
+npm install && npm run build
+uv venv .venv
+uv pip install --python .venv/bin/python pillow imageio-ffmpeg
+.venv/bin/python docs/demo/render.py
+```
 
 ## Install
 

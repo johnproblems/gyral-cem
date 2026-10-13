@@ -4,10 +4,15 @@
 Frames are rendered with PIL at 1280x720@10fps; GIFs are downscaled to 960x540
 and MP4s are encoded with imageio-ffmpeg (H.264). Every command shown is
 executed for real in the repo root and its actual output is rendered.
-Regenerate with (from a checkout with `dist/` built):
+Regenerate with:
 
-    uv venv .venv && uv pip install pillow imageio-ffmpeg
+    npm install && npm run build
+    uv venv .venv
+    uv pip install --python .venv/bin/python pillow imageio-ffmpeg
     .venv/bin/python docs/demo/render.py
+
+(Without uv: `python3 -m venv .venv && .venv/bin/pip install pillow
+imageio-ffmpeg`.) Requires DejaVu Sans Mono (most Linux desktops ship it).
 """
 
 from __future__ import annotations
@@ -209,6 +214,8 @@ CLIPS: dict[str, tuple[str, list[str]]] = {
 
 
 def main() -> None:
+    if not (ROOT / "dist" / "cli.js").exists() or not (ROOT / "node_modules").exists():
+        raise SystemExit("Run `npm install && npm run build` first: dist/ is missing.")
     HERE.mkdir(parents=True, exist_ok=True)
     for name, (title, commands) in CLIPS.items():
         print(f"capturing {name}...", flush=True)
