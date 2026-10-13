@@ -1,0 +1,382 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`manifest snapshots > snapshots counter 1`] = `
+{
+  "modules": [
+    {
+      "declarations": [
+        {
+          "attributes": [
+            {
+              "default": "'Count'",
+              "description": "Label shown next to the count.",
+              "fieldName": "label",
+              "name": "label",
+              "type": {
+                "text": "string",
+              },
+            },
+          ],
+          "cssProperties": [
+            {
+              "default": "currentColor",
+              "name": "--counter-color",
+            },
+          ],
+          "customElement": true,
+          "description": "A minimal counter with one prop and one output.",
+          "events": [
+            {
+              "description": "\`gyral-output\` with detail._tag === 'CountChanged' (bubbles, composed: false).",
+              "name": "gyral-output",
+              "type": {
+                "text": "CustomEvent<{ readonly _tag: "CountChanged"; readonly count: number; }>",
+              },
+            },
+          ],
+          "kind": "class",
+          "members": [
+            {
+              "attribute": "label",
+              "default": "'Count'",
+              "description": "Label shown next to the count.",
+              "kind": "field",
+              "name": "label",
+              "reflects": true,
+              "type": {
+                "text": "string",
+              },
+            },
+          ],
+          "name": "Counter",
+          "superclass": {
+            "name": "HTMLElement",
+          },
+          "tagName": "x-counter",
+        },
+      ],
+      "exports": [
+        {
+          "declaration": {
+            "module": "examples/counter/counter.ts",
+            "name": "Counter",
+          },
+          "kind": "js",
+          "name": "Counter",
+        },
+        {
+          "declaration": {
+            "module": "examples/counter/counter.ts",
+            "name": "Counter",
+          },
+          "kind": "custom-element-definition",
+          "name": "x-counter",
+        },
+      ],
+      "kind": "javascript-module",
+      "path": "examples/counter/counter.ts",
+    },
+  ],
+  "schemaVersion": "2.1.0",
+}
+`;
+
+exports[`manifest snapshots > snapshots form-input 1`] = `
+{
+  "modules": [
+    {
+      "declarations": [
+        {
+          "attributes": [
+            {
+              "default": "''",
+              "description": "string prop "value".",
+              "fieldName": "value",
+              "name": "value",
+              "type": {
+                "text": "string",
+              },
+            },
+          ],
+          "cssParts": [
+            {
+              "name": "field",
+            },
+          ],
+          "customElement": true,
+          "description": "A form-associated text field with a property-only schema prop.",
+          "events": [
+            {
+              "description": "\`gyral-output\` with detail._tag === 'Changed' (bubbles, composed: false).",
+              "name": "gyral-output",
+              "type": {
+                "text": "CustomEvent<{ readonly _tag: "Changed"; readonly value: string; }>",
+              },
+            },
+          ],
+          "kind": "class",
+          "members": [
+            {
+              "attribute": "value",
+              "default": "''",
+              "description": "string prop.",
+              "kind": "field",
+              "name": "value",
+              "reflects": true,
+              "type": {
+                "text": "string",
+              },
+            },
+            {
+              "deprecated": "Pass validation rules through the form instead.",
+              "description": "value prop.",
+              "kind": "field",
+              "name": "schema",
+              "reflects": false,
+              "type": {
+                "text": "{ readonly minLength: number; } | undefined",
+              },
+            },
+            {
+              "default": "true",
+              "description": "Native form participation (spec.formAssociated).",
+              "kind": "field",
+              "name": "formAssociated",
+              "type": {
+                "text": "true",
+              },
+            },
+          ],
+          "name": "FormInput",
+          "superclass": {
+            "name": "HTMLElement",
+          },
+          "tagName": "form-input",
+        },
+      ],
+      "exports": [
+        {
+          "declaration": {
+            "module": "examples/form-input/form-input.ts",
+            "name": "FormInput",
+          },
+          "kind": "js",
+          "name": "FormInput",
+        },
+        {
+          "declaration": {
+            "module": "examples/form-input/form-input.ts",
+            "name": "FormInput",
+          },
+          "kind": "custom-element-definition",
+          "name": "form-input",
+        },
+      ],
+      "kind": "javascript-module",
+      "path": "examples/form-input/form-input.ts",
+    },
+  ],
+  "schemaVersion": "2.1.0",
+}
+`;
+
+exports[`manifest snapshots > snapshots product-card 1`] = `
+{
+  "modules": [
+    {
+      "declarations": [
+        {
+          "attributes": [
+            {
+              "description": "Stock-keeping unit; the card's identity.",
+              "fieldName": "sku",
+              "name": "sku",
+              "type": {
+                "text": "string",
+              },
+            },
+            {
+              "default": "10",
+              "description": "Maximum quantity the stepper allows. Defaults to 10.",
+              "fieldName": "maxQuantity",
+              "name": "max-quantity",
+              "type": {
+                "text": "number",
+              },
+            },
+            {
+              "default": "false",
+              "description": "boolean prop "featured".",
+              "fieldName": "featured",
+              "name": "featured",
+              "type": {
+                "text": "boolean",
+              },
+            },
+            {
+              "default": "[]",
+              "description": "json prop "tags".",
+              "fieldName": "tags",
+              "name": "tags",
+              "type": {
+                "text": "readonly string[]",
+              },
+            },
+            {
+              "description": "string prop "title".",
+              "fieldName": "title",
+              "name": "card-title",
+              "type": {
+                "text": "string",
+              },
+            },
+          ],
+          "cssParts": [
+            {
+              "name": "image",
+            },
+            {
+              "name": "price",
+            },
+          ],
+          "cssProperties": [
+            {
+              "name": "--card-bg",
+            },
+            {
+              "name": "--card-fg",
+            },
+          ],
+          "cssStates": [
+            {
+              "name": "loading",
+            },
+            {
+              "name": "empty",
+            },
+            {
+              "name": "featured",
+            },
+          ],
+          "customElement": true,
+          "description": "custom properties, custom states, and form-adjacent styling.",
+          "events": [
+            {
+              "description": "\`gyral-output\` with detail._tag one of: 'AddedToCart', 'Removed', 'Picked' (bubbles, composed: false).
+- AddedToCart: Emitted when the shopper adds this product to the cart.
+- Removed: Emitted when the shopper removes this product from the cart.
+- Picked: Emitted when the shopper picks this product.",
+              "name": "gyral-output",
+              "type": {
+                "text": "CustomEvent<{ readonly _tag: "AddedToCart"; readonly sku: string; readonly quantity: number; } | { readonly _tag: "Removed"; readonly sku: string; } | { readonly _tag: "Picked"; readonly sku: string; }>",
+              },
+            },
+          ],
+          "kind": "class",
+          "members": [
+            {
+              "attribute": "sku",
+              "description": "Stock-keeping unit; the card's identity.",
+              "kind": "field",
+              "name": "sku",
+              "reflects": true,
+              "type": {
+                "text": "string",
+              },
+            },
+            {
+              "attribute": "max-quantity",
+              "default": "10",
+              "description": "Maximum quantity the stepper allows. Defaults to 10.",
+              "kind": "field",
+              "name": "maxQuantity",
+              "reflects": true,
+              "type": {
+                "text": "number",
+              },
+            },
+            {
+              "attribute": "featured",
+              "default": "false",
+              "description": "boolean prop.",
+              "kind": "field",
+              "name": "featured",
+              "reflects": true,
+              "type": {
+                "text": "boolean",
+              },
+            },
+            {
+              "attribute": "tags",
+              "default": "[]",
+              "description": "json prop.",
+              "kind": "field",
+              "name": "tags",
+              "reflects": true,
+              "type": {
+                "text": "readonly string[]",
+              },
+            },
+            {
+              "description": "value prop.",
+              "kind": "field",
+              "name": "product",
+              "reflects": false,
+              "type": {
+                "text": "{ readonly sku: string; readonly price: number; } | undefined",
+              },
+            },
+            {
+              "attribute": "card-title",
+              "description": "string prop.",
+              "kind": "field",
+              "name": "title",
+              "reflects": true,
+              "type": {
+                "text": "string | undefined",
+              },
+            },
+          ],
+          "name": "ProductCard",
+          "slots": [
+            {
+              "description": "Default slot.",
+              "name": "",
+            },
+            {
+              "description": "Slot "actions".",
+              "name": "actions",
+            },
+          ],
+          "summary": "A product card with every prop builder, three outputs, slots, parts,",
+          "superclass": {
+            "name": "HTMLElement",
+          },
+          "tagName": "product-card",
+        },
+      ],
+      "exports": [
+        {
+          "declaration": {
+            "module": "examples/product-card/product-card.ts",
+            "name": "ProductCard",
+          },
+          "kind": "js",
+          "name": "ProductCard",
+        },
+        {
+          "declaration": {
+            "module": "examples/product-card/product-card.ts",
+            "name": "ProductCard",
+          },
+          "kind": "custom-element-definition",
+          "name": "product-card",
+        },
+      ],
+      "kind": "javascript-module",
+      "path": "examples/product-card/product-card.ts",
+    },
+  ],
+  "schemaVersion": "2.1.0",
+}
+`;

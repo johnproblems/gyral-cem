@@ -1,0 +1,6 @@
+node_modules/
+dist/
+custom-elements.json
+.gyral/
+*.tsbuildinfo
+coverage/
